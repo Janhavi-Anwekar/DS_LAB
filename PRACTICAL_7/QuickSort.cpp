@@ -3,14 +3,12 @@
 
 using namespace std;
 
-// Function to swap two elements
 void swap(int& a, int& b) {
     int temp = a;
     a = b;
     b = temp;
 }
 
-// Partition function using the last element as the pivot
 int partition(vector<int>& arr, int low, int high) {
     int pivot = arr[high];
     int i = low - 1;
@@ -25,7 +23,6 @@ int partition(vector<int>& arr, int low, int high) {
     return i + 1;
 }
 
-// QuickSort recursive function
 void quickSort(vector<int>& arr, int low, int high) {
     if (low < high) {
         int pivotIndex = partition(arr, low, high);
